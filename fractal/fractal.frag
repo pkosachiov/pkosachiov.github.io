@@ -34,11 +34,12 @@ void main() {
     float cc;
 
     if (u_fractal_type == 0)
-    cc = julia((DrawCoord + u_offset) / u_zoom, vec2(max(0.1, 0.05 + abs(0.35 * sin(u_time / 100.0))), 0.35));
+    cc = julia((DrawCoord + u_offset) / u_zoom, mix(vec2(0.1, 0.1), vec2(0.365, 0.365), abs(sin(u_time / 100.0))));
     else
     cc = mondel((DrawCoord + u_offset) / u_zoom);
-    if (cc > 0.91)
-    o_color = vec4(mix(u_color1, u_color2, DrawCoord.x + DrawCoord.y * sin(u_time / 100.0)), cc);
-    else
+
+    if (cc >= 0.91)
     o_color = vec4(0, 0, 0, 1);
+    else
+    o_color = vec4(mix(u_color1, u_color2, DrawCoord.x + DrawCoord.y * sin(u_time / 100.0)) * cc, 1.0);
 }
