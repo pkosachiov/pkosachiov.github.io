@@ -3,9 +3,56 @@
 
 <head>
     <link rel="icon" type="image/png" href="/imgs/favicon.png">
+
+    <title>4</title>
+    <style>
+    *,
+    html {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .center {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 144px;
+    }
+
+    p {
+        font-size: 64px;
+    }
+    </style>
 </head>
 
 <body>
+    <script type="module">
+    import {logSmth} from "./client.js"
+    logSmth();
+    </script>
     <div class="flex-container"></div>
         <a style="font-size: 24px;" href="./fractal/fractal.html">Fractal</a>
         <img src="/imgs/Julia.gif" alt="Description of the image" width="50">
@@ -13,6 +60,10 @@
     <div class="flex-container"></div>
         <a style="font-size: 24px;" href="./polyhedr/polyhedr.html">Polyhedr</a>
         <img src="/imgs/Helicatenoid.gif" alt="Description of the image" width="50">
+    </body>
+    <div class="flex-container"></div>
+        <a style="font-size: 24px;" href="./messanger/messanger.html">Messanger</a>
+        <img src="/imgs/max.png" alt="Description of the image" width="50">
     </body>
 </body>
 
