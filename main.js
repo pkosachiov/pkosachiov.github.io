@@ -96,7 +96,7 @@ io.on("connection", (socket) => {
 // });
 
 const port = 8080;
-const HOST = '0.0.0.0';
+const HOST = '188.243.216.196';
 
 server.listen(port, HOST, () => {
   console.log(`Server started on http://${HOST}:${port}`);
